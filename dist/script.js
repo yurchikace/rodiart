@@ -118,7 +118,7 @@ translations.uk = {
   footer: 'Авторські костюми. Індивідуальна історія.'
 };
 function setLanguage(language) {
-  if (!Object.prototype.hasOwnProperty.call(translations, language)) language = 'ru';
+  if (!Object.prototype.hasOwnProperty.call(translations, language)) language = 'en';
   const text = translations[language];
   document.getElementById('copy-status').textContent = '';
   document.documentElement.lang = language;
@@ -134,11 +134,27 @@ function setLanguage(language) {
 }
 
 document.querySelectorAll('[data-lang]').forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
-let initialLanguage = 'ru';
+function selectInitialLanguage(requested, preferredLanguages) {
+  const supportedLanguage = value => {
+    const language = String(value || '').toLowerCase().split(/[-_]/)[0];
+    return Object.prototype.hasOwnProperty.call(translations, language) ? language : null;
+  };
+  const explicit = supportedLanguage(requested);
+  if (explicit) return explicit;
+  for (const preference of preferredLanguages) {
+    const language = supportedLanguage(preference);
+    if (language) return language;
+  }
+  return 'en';
+}
+let requestedLanguage = null;
 try {
-  const requested = new URLSearchParams(location.search).get('lang');
-  initialLanguage = requested || 'ru';
-} catch { /* Fall back to the Russian version. */ }
+  requestedLanguage = new URLSearchParams(location.search).get('lang');
+} catch { /* Use the browser's language preferences. */ }
+const initialLanguage = selectInitialLanguage(
+  requestedLanguage,
+  navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language]
+);
 setLanguage(initialLanguage);
 document.getElementById('year').textContent = new Date().getFullYear();
 
