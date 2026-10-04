@@ -38,6 +38,7 @@ const translations = {
 };
 
 Object.assign(translations.ru, {
+  makingEyebrow: 'ИЗ ЭСКИЗА — В АТЕЛЬЕ', makingTitle: 'От рисунка к платью.', makingText: 'Тот самый образ обретает форму: ручная работа, сияющий декор и каждая деталь будущего платья.', makingCaption: 'Ручная работа · Детали настоящего платья', makingVideoLabel: 'Работа над платьем в ателье RodiArt', sketchVideoLabel: 'Процесс рисования эскиза', videoFallback: 'Ваш браузер не поддерживает видео.', copyAddress: 'Скопировать адрес', addressCopied: 'Адрес скопирован', copyFailed: 'Выделите адрес и скопируйте его вручную.', addressLabel: 'Адрес ателье', mapsLink: 'Открыть в Google Maps',
   brandCaption: 'АТЕЛЬЕ КОСТЮМОВ ДЛЯ ЛАТИНЫ', locationLabel: 'RODIART / ГРЕЦИЯ',
   workIntro: 'Два образа, два характера. Наши платья на паркете — там, где силуэт, декор и движение становятся одним целым.',
   dress1Alt: 'Чёрное платье RodiArt с декором цвета фуксии на танцовщице', dress2Alt: 'Чёрно-белое платье RodiArt с воланами на танцовщице',
@@ -50,6 +51,7 @@ Object.assign(translations.ru, {
   step4Title: 'Начинается волшебство', step4Text: 'Ателье воплощает согласованный образ: от первых стежков до последних деталей — чтобы ваша идея стала вашим платьем.'
 });
 Object.assign(translations.el, {
+  makingEyebrow: 'ΑΠΟ ΤΟ ΣΚΙΤΣΟ ΣΤΟ ΑΤΕΛΙΕ', makingTitle: 'Από το σχέδιο στο φόρεμα.', makingText: 'Η ίδια ιδέα παίρνει μορφή: δουλειά στο χέρι, λαμπερές λεπτομέρειες και κάθε στοιχείο του νέου φορέματος.', makingCaption: 'Χειροποίητη δημιουργία · Λεπτομέρειες του φορέματος', makingVideoLabel: 'Δημιουργία φορέματος στο ατελιέ RodiArt', sketchVideoLabel: 'Η διαδικασία σχεδίασης', videoFallback: 'Το πρόγραμμα περιήγησής σας δεν υποστηρίζει βίντεο.', copyAddress: 'Αντιγραφή διεύθυνσης', addressCopied: 'Η διεύθυνση αντιγράφηκε', copyFailed: 'Επιλέξτε τη διεύθυνση και αντιγράψτε την χειροκίνητα.', addressLabel: 'Διεύθυνση του ατελιέ', mapsLink: 'Άνοιγμα στο Google Maps',
   brandCaption: 'ΑΤΕΛΙΕ ΚΟΣΤΟΥΜΙΩΝ ΛΑΤΙΝ', locationLabel: 'RODIART / ΕΛΛΑΔΑ',
   workIntro: 'Δύο εμφανίσεις, δύο χαρακτήρες. Τα φορέματά μας στην πίστα — εκεί όπου η γραμμή, η διακόσμηση και η κίνηση γίνονται ένα.',
   dress1Alt: 'Χορεύτρια με μαύρο φόρεμα RodiArt και φούξια φτερά', dress2Alt: 'Χορεύτρια με ασπρόμαυρο φόρεμα RodiArt με βολάν',
@@ -62,6 +64,7 @@ Object.assign(translations.el, {
   step4Title: 'Η μαγεία ξεκινά', step4Text: 'Το ατελιέ ζωντανεύει το σχέδιο που επιλέξαμε μαζί: από τις πρώτες βελονιές μέχρι τις τελευταίες λεπτομέρειες, η ιδέα σας γίνεται το δικό σας φόρεμα.'
 });
 Object.assign(translations.en, {
+  makingEyebrow: 'FROM SKETCH TO ATELIER', makingTitle: 'From drawing to dress.', makingText: 'The same design takes shape through handwork, shimmering embellishments and every detail of the dress to come.', makingCaption: 'Made by hand · Details of the real dress', makingVideoLabel: 'Making the dress at the RodiArt atelier', sketchVideoLabel: 'Sketch drawing process', videoFallback: 'Your browser does not support video.', copyAddress: 'Copy address', addressCopied: 'Address copied', copyFailed: 'Select the address and copy it manually.', addressLabel: 'Atelier address', mapsLink: 'Open in Google Maps',
   brandCaption: 'LATIN DANCE ATELIER', locationLabel: 'RODIART / GREECE',
   workIntro: 'Two looks, two personalities. Our dresses on the dance floor — where silhouette, decoration and movement come together.',
   dress1Alt: 'Dancer wearing a black RodiArt dress with fuchsia feathers', dress2Alt: 'Dancer wearing a black and white RodiArt dress with ruffles',
@@ -74,9 +77,50 @@ Object.assign(translations.en, {
   step4Title: 'The magic begins', step4Text: 'The atelier brings our agreed design to life: from the first stitches to the final details, your idea becomes your dress.'
 });
 
+translations.uk = {
+  pageTitle: 'RodiArt — Мистецтво бути в русі',
+  description: 'RodiArt — авторські костюми для латиноамериканських бальних танців. Індивідуальне пошиття для дітей і дорослих у Греції.',
+  skip: 'До вмісту', navigation: 'Навігація', language: 'Мова',
+  aboutNav: 'Про нас', workNav: 'Наші роботи', processNav: 'Як народжується сукня',
+  brandCaption: 'АТЕЛЬЄ КОСТЮМІВ ДЛЯ ЛАТИНИ', locationLabel: 'RODIART / ГРЕЦІЯ', heroLabel: 'АВТОРСЬКІ КОСТЮМИ ДЛЯ ЛАТИНИ',
+  title1: 'Мистецтво бути', title2: 'в русі.',
+  intro: 'Костюм, який відчуває ваш ритм. Створюємо авторські образи для латиноамериканських бальних танців — для дітей і дорослих.',
+  contact: 'Зв’язатися', contactNote: 'Обговорімо ваш образ в Instagram', artCaption: 'ХАРАКТЕР. ЛІНІЯ. РУХ.',
+  logoAlt: 'RodiArt — червоний гранат і рукописний логотип',
+  tailored: 'Індивідуальне пошиття · Для дітей і дорослих', discover: 'Знайомство з ательє',
+  aboutTitle: 'Ми знаємо танець. Тому відчуваємо кожну деталь.',
+  about1: 'RodiArt — студія авторських костюмів для латиноамериканських бальних танців. За нашою роботою — багаторічний досвід у бальних танцях і створенні бальних суконь.',
+  about2: 'Ми створюємо костюм для конкретного танцівника: з огляду на його характер, фігуру й рух. Для дитини, яка виходить на паркет, і для дорослого, який хоче виразити себе в танці.',
+  principle1: 'Ваш характер', principle1Text: 'Образ починається з вас, вашого танцю та вашої ідеї.',
+  principle2: 'Індивідуальне пошиття', principle2Text: 'Увага до силуету, посадки та свободи руху.',
+  principle3: 'Досвід у танці', principle3Text: 'Розуміння паркету в кожній деталі костюма.',
+  workTitle: 'Створені для танцю.\nСтворені для вас.',
+  workIntro: 'Два образи, два характери. Наші сукні на паркеті — там, де силует, декор і рух стають одним цілим.',
+  portfolioTitle: 'Кожен образ —\nсвій ритм.', portfolioLink: 'Дивитися роботи в Instagram',
+  dress1Alt: 'Чорна сукня RodiArt з декором кольору фуксії на танцівниці',
+  dress2Alt: 'Чорно-біла сукня RodiArt з воланами на танцівниці',
+  dress1Title: 'Енергія фуксії', dress1Text: 'Яскраве пір’я, сяйливі акценти та виразний чорний силует.',
+  dress2Title: 'Гра контрастів', dress2Text: 'Чорне й біле, легкі волани та блиск декоративних ліній.',
+  processTitle: 'Спочатку — ваша мрія.\nПотім — магія ательє.',
+  processIntro: 'Кожна сукня починається з розмови. Разом із досвідченим дизайнером ми перетворюємо ваші побажання на образ, який хочеться оживити в танці.',
+  sketchAlt: 'Ескіз нової сукні RodiArt у блакитних і фіолетових відтінках: вигляд спереду та ззаду',
+  sketchCaption: 'Ескіз нової сукні · Ідея набуває форми', sketchVideoLabel: 'Процес малювання ескізу',
+  step1Title: 'Слухаємо та надихаємося', step1Text: 'Обговорюємо ваші побажання, характер танцю та настрій майбутнього образу.',
+  step2Title: 'Продумуємо кожну лінію', step2Text: 'Разом із дизайнером опрацьовуємо форму, обираємо тканини, відтінки та декор.',
+  step3Title: 'Візуалізуємо мрію', step3Text: 'Поєднуємо ідеї в ескізі, обговорюємо деталі й разом уявляємо сукню в русі.',
+  step4Title: 'Починається магія', step4Text: 'Ательє втілює узгоджений образ: від перших стібків до останніх деталей — щоб ваша ідея стала вашою сукнею.',
+  makingCaption: 'Ручна робота · Деталі справжньої сукні', makingVideoLabel: 'Робота над сукнею в ательє RodiArt',
+  videoFallback: 'Ваш браузер не підтримує відео.',
+  contactEyebrow: 'ВАШ НАСТУПНИЙ ВИХІД НА ПАРКЕТ', contactTitle: 'Почнімо з вашої ідеї.',
+  contactText: 'Розкажіть, для кого створюємо костюм, який образ вам близький і коли він потрібен. Решту обговоримо разом.',
+  addressLabel: 'Адреса ательє', mapsLink: 'Відкрити в Google Maps', copyAddress: 'Скопіювати адресу',
+  addressCopied: 'Адресу скопійовано', copyFailed: 'Виділіть адресу та скопіюйте її вручну.',
+  footer: 'Авторські костюми. Індивідуальна історія.'
+};
 function setLanguage(language) {
   if (!Object.prototype.hasOwnProperty.call(translations, language)) language = 'ru';
   const text = translations[language];
+  document.getElementById('copy-status').textContent = '';
   document.documentElement.lang = language;
   document.title = text.pageTitle;
   document.querySelector('meta[name="description"]').content = text.description;
@@ -97,3 +141,60 @@ try {
 } catch { /* Fall back to the Russian version. */ }
 setLanguage(initialLanguage);
 document.getElementById('year').textContent = new Date().getFullYear();
+
+const addressElement = document.getElementById('atelier-address');
+document.querySelector('.copy-address').addEventListener('click', async () => {
+  const address = addressElement.textContent.trim();
+  let copied = false;
+  try {
+    await navigator.clipboard.writeText(address);
+    copied = true;
+  } catch {
+    // Support local previews and browsers without the Clipboard API.
+    const input = document.createElement('textarea');
+    input.value = address;
+    input.setAttribute('readonly', '');
+    input.style.cssText = 'position:fixed;left:-9999px;top:0';
+    document.body.appendChild(input);
+    input.select();
+    try { copied = document.execCommand('copy'); } catch { /* Offer manual selection below. */ }
+    input.remove();
+    document.querySelector('.copy-address').focus({ preventScroll: true });
+  }
+  if (!copied) {
+    const range = document.createRange();
+    range.selectNodeContents(addressElement);
+    const selection = window.getSelection();
+    selection.removeAllRanges();
+    selection.addRange(range);
+  }
+  const text = translations[document.documentElement.lang];
+  document.getElementById('copy-status').textContent = copied ? text.addressCopied : text.copyFailed;
+});
+
+// Each clip plays once when visible and keeps its final frame.
+const processReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+document.querySelectorAll('.sketch-video, .making-video').forEach(video => {
+  let visible = false;
+  video.muted = true;
+  video.defaultMuted = true;
+  function playWhenVisible() {
+    if (visible && !processReducedMotion.matches && !video.ended) {
+      video.play().catch(() => { /* Keep the poster if autoplay is blocked. */ });
+    } else {
+      video.pause();
+    }
+  }
+  video.addEventListener('loadeddata', playWhenVisible);
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver(entries => {
+      visible = entries.some(entry => entry.isIntersecting);
+      playWhenVisible();
+    }, { threshold: .1 });
+    observer.observe(video);
+  } else {
+    visible = true;
+    playWhenVisible();
+  }
+  processReducedMotion.addEventListener('change', playWhenVisible);
+});
