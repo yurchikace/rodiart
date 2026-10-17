@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yurchikace.github.io/rodiart/sitemap.xml

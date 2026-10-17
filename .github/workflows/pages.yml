@@ -24,7 +24,13 @@ jobs:
       - name: Check out project
         uses: actions/checkout@v4
       - name: Configure Pages
+        id: pages
         uses: actions/configure-pages@v5
+      - name: Generate searchable language pages
+        shell: pwsh
+        env:
+          SITE_URL: ${{ steps.pages.outputs.base_url }}
+        run: ./scripts/build-seo.ps1 -SiteUrl $env:SITE_URL
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
         with:

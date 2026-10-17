@@ -117,45 +117,27 @@ translations.uk = {
   addressCopied: 'Адресу скопійовано', copyFailed: 'Виділіть адресу та скопіюйте її вручну.',
   footer: 'Авторські костюми. Індивідуальна історія.'
 };
-function setLanguage(language) {
-  if (!Object.prototype.hasOwnProperty.call(translations, language)) language = 'en';
-  const text = translations[language];
-  document.getElementById('copy-status').textContent = '';
-  document.documentElement.lang = language;
-  document.title = text.pageTitle;
-  document.querySelector('meta[name="description"]').content = text.description;
-  document.querySelectorAll('[data-i18n]').forEach(element => {
-    element.textContent = text[element.dataset.i18n];
-    if (text[element.dataset.i18n].includes('\n')) element.style.whiteSpace = 'pre-line';
-  });
-  document.querySelectorAll('[data-label]').forEach(element => element.setAttribute('aria-label', text[element.dataset.label]));
-  document.querySelectorAll('[data-alt]').forEach(element => element.alt = text[element.dataset.alt]);
-  document.querySelectorAll('[data-lang]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.lang === language)));
+Object.assign(translations.ru, {
+  pageTitle: 'RodiArt — Платья для латины на заказ в Афинах, Греция',
+  description: 'Ателье RodiArt в Афинах, Греция: индивидуальный пошив платьев и костюмов для латиноамериканских бальных танцев для детей и взрослых. Связь через Instagram.',
+  locationLabel: 'RODIART / АФИНЫ, ГРЕЦИЯ',
+  intro: 'Создаём платья и костюмы для латиноамериканских бальных танцев на заказ для детей и взрослых. Ателье RodiArt в Афинах, Греция: от идеи и эскиза до индивидуального пошива.'
+});
+Object.assign(translations.el, {
+  pageTitle: 'RodiArt — Φορέματα λάτιν κατά παραγγελία στην Αθήνα',
+  description: 'Ατελιέ RodiArt στην Αθήνα: φορέματα και κοστούμια αγωνιστικού λάτιν χορού στα μέτρα σας για παιδιά και ενήλικες. Επικοινωνήστε μέσω Instagram.',
+  locationLabel: 'RODIART / ΑΘΗΝΑ, ΕΛΛΑΔΑ',
+  intro: 'Δημιουργούμε φορέματα και κοστούμια αγωνιστικού λάτιν χορού κατά παραγγελία για παιδιά και ενήλικες. Στο ατελιέ RodiArt στην Αθήνα, η ιδέα σας γίνεται σχέδιο και ράβεται στα μέτρα σας.'
+});
+// Keep old ?lang= links working; each language has a stable, rendered URL.
+const requestedLanguage = new URLSearchParams(location.search).get('lang');
+if (Object.prototype.hasOwnProperty.call(translations, requestedLanguage) && requestedLanguage !== document.documentElement.lang) {
+  const currentScript = document.querySelector('script[src$="script.js"]');
+  const siteRoot = new URL('.', currentScript.src);
+  const target = new URL(requestedLanguage === 'ru' ? 'index.html' : requestedLanguage + '/index.html', siteRoot);
+  target.hash = location.hash;
+  location.replace(target.href);
 }
-
-document.querySelectorAll('[data-lang]').forEach(button => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
-function selectInitialLanguage(requested, preferredLanguages) {
-  const supportedLanguage = value => {
-    const language = String(value || '').toLowerCase().split(/[-_]/)[0];
-    return Object.prototype.hasOwnProperty.call(translations, language) ? language : null;
-  };
-  const explicit = supportedLanguage(requested);
-  if (explicit) return explicit;
-  for (const preference of preferredLanguages) {
-    const language = supportedLanguage(preference);
-    if (language) return language;
-  }
-  return 'en';
-}
-let requestedLanguage = null;
-try {
-  requestedLanguage = new URLSearchParams(location.search).get('lang');
-} catch { /* Use the browser's language preferences. */ }
-const initialLanguage = selectInitialLanguage(
-  requestedLanguage,
-  navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language]
-);
-setLanguage(initialLanguage);
 document.getElementById('year').textContent = new Date().getFullYear();
 
 const addressElement = document.getElementById('atelier-address');
