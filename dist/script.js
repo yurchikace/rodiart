@@ -129,6 +129,24 @@ Object.assign(translations.el, {
   locationLabel: 'RODIART / ΑΘΗΝΑ, ΕΛΛΑΔΑ',
   intro: 'Δημιουργούμε φορέματα και κοστούμια αγωνιστικού λάτιν χορού κατά παραγγελία για παιδιά και ενήλικες. Στο ατελιέ RodiArt στην Αθήνα, η ιδέα σας γίνεται σχέδιο και ράβεται στα μέτρα σας.'
 });
+// Shared presentation copy across all rendered language pages.
+Object.assign(translations.ru, {
+  intro: 'Костюм, который чувствует ваш ритм. Создаём авторские образы для латиноамериканских бальных танцев — для детей и взрослых.',
+  contactNote: 'Напишите нам в Instagram'
+});
+Object.assign(translations.el, {
+  intro: 'Ένα κοστούμι που νιώθει τον ρυθμό σας. Δημιουργούμε μοναδικές εμφανίσεις για αγωνιστικό λάτιν χορό — για παιδιά και ενήλικες.',
+  contactNote: 'Στείλτε μας μήνυμα στο Instagram'
+});
+Object.assign(translations.uk, {
+  locationLabel: 'RODIART / АФІНИ, ГРЕЦІЯ',
+  contactNote: 'Напишіть нам в Instagram'
+});
+Object.assign(translations.en, {
+  locationLabel: 'RODIART / ATHENS, GREECE',
+  contactNote: 'Message us on Instagram'
+});
+
 // Keep old ?lang= links working; each language has a stable, rendered URL.
 const requestedLanguage = new URLSearchParams(location.search).get('lang');
 if (Object.prototype.hasOwnProperty.call(translations, requestedLanguage) && requestedLanguage !== document.documentElement.lang) {

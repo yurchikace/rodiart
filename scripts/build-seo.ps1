@@ -17,13 +17,12 @@ foreach ($lang in $languages) {
   $patterns += '(?s)\b' + $lang + ':\s*\{(.*?)\n  \}'
   $patterns += '(?s)Object\.assign\(translations\.' + $lang + ',\s*\{(.*?)\}\);'
   $patterns += '(?s)translations\.' + $lang + '\s*=\s*\{(.*?)\n\};'
-  foreach ($pattern in $patterns) {
-    foreach ($block in [regex]::Matches($source, $pattern)) {
+  $blocks = foreach ($pattern in $patterns) { [regex]::Matches($source, $pattern) }
+    foreach ($block in ($blocks | Sort-Object Index)) {
       foreach ($pair in [regex]::Matches($block.Groups[1].Value, '(\w+):\s*''((?:\\.|[^''\\])*)''')) {
         $texts[$lang][$pair.Groups[1].Value] = $pair.Groups[2].Value.Replace('\n', "`n").Replace("\'", "'").Replace('\\', '\')
       }
     }
-  }
 }
 $urls = @{ru = $SiteUrl; el = ($SiteUrl + 'el/'); uk = ($SiteUrl + 'uk/'); en = ($SiteUrl + 'en/')}
 $locales = @{el='el_GR'; ru='ru_RU'; uk='uk_UA'; en='en_GB'}
