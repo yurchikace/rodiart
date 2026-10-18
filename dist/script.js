@@ -147,6 +147,23 @@ Object.assign(translations.en, {
   contactNote: 'Message us on Instagram'
 });
 
+Object.assign(translations.ru, {
+  about1: 'RodiArt — ателье пошива бальных платьев для латиноамериканской программы в Афинах. Создаём авторские платья и костюмы на заказ для детей и взрослых. В основе нашей работы — многолетний опыт в бальных танцах и создании танцевальных платьев.',
+  about2: 'Каждый образ создаём для конкретного танцора: учитываем его характер, фигуру и движение. Вместе обсуждаем идею, разрабатываем эскиз, выбираем ткани и декор — чтобы платье подчёркивало индивидуальность и позволяло свободно двигаться. Обсудить идею и детали заказа можно на русском, украинском, английском и греческом языках.'
+});
+Object.assign(translations.el, {
+  about1: 'Το RodiArt είναι ένα ατελιέ στην Αθήνα που δημιουργεί φορέματα και κοστούμια κατά παραγγελία για αγωνιστικό λάτιν χορό, για παιδιά και ενήλικες. Η δουλειά μας βασίζεται στην πολυετή εμπειρία στον αθλητικό χορό και στη δημιουργία χορευτικών φορεμάτων.',
+  about2: 'Κάθε εμφάνιση σχεδιάζεται για τον συγκεκριμένο χορευτή: λαμβάνουμε υπόψη τον χαρακτήρα, το σώμα και την κίνησή του. Συζητάμε μαζί την ιδέα, δημιουργούμε το σκίτσο και επιλέγουμε υφάσματα και διακοσμητικά στοιχεία, ώστε το φόρεμα να αναδεικνύει την προσωπικότητα και να προσφέρει ελευθερία κίνησης. Μπορούμε να συζητήσουμε την ιδέα και τις λεπτομέρειες της παραγγελίας στα ρωσικά, ουκρανικά, αγγλικά και ελληνικά.'
+});
+Object.assign(translations.uk, {
+  about1: 'RodiArt — ательє пошиття бальних суконь для латиноамериканської програми в Афінах. Створюємо авторські сукні та костюми на замовлення для дітей і дорослих. В основі нашої роботи — багаторічний досвід у бальних танцях і створенні танцювальних суконь.',
+  about2: 'Кожен образ створюємо для конкретного танцівника: враховуємо його характер, фігуру та рух. Разом обговорюємо ідею, розробляємо ескіз, обираємо тканини й декор — щоб сукня підкреслювала індивідуальність і дозволяла вільно рухатися. Обговорити ідею та деталі замовлення можна російською, українською, англійською та грецькою мовами.'
+});
+Object.assign(translations.en, {
+  about1: 'RodiArt is an atelier in Athens specialising in made-to-measure ballroom dresses for the Latin programme. We create original dresses and costumes for children and adults. Our work draws on years of experience in ballroom dancing and creating dance dresses.',
+  about2: 'Each look is designed for the individual dancer, taking their personality, figure and movement into account. Together, we discuss the idea, develop a sketch and choose fabrics and embellishments, so the dress expresses individuality and allows freedom of movement. We can discuss your ideas and order details in Russian, Ukrainian, English and Greek.'
+});
+
 // Keep old ?lang= links working; each language has a stable, rendered URL.
 const requestedLanguage = new URLSearchParams(location.search).get('lang');
 if (Object.prototype.hasOwnProperty.call(translations, requestedLanguage) && requestedLanguage !== document.documentElement.lang) {
