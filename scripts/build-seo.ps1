@@ -1,4 +1,4 @@
-param([string]$SiteUrl = 'https://rodiart.gr/')
+﻿param([string]$SiteUrl = 'https://rodiart.gr/')
 $ErrorActionPreference = 'Stop'
 $root = Split-Path $PSScriptRoot -Parent
 $dist = Join-Path $root 'dist'
@@ -66,6 +66,10 @@ foreach ($lang in $languages) {
   $page = @{'@type'='WebPage'; '@id'=$urls[$lang]; url=$urls[$lang]; name=$text.pageTitle; description=$text.description; inLanguage=$lang; about=@{'@id'=($SiteUrl+'#atelier')}}
   $schema = @{'@context'='https://schema.org'; '@graph'=@($business,$page)} | ConvertTo-Json -Depth 12
   $metadata += '<script type="application/ld+json">' + $schema + '</script>'
+  $html = $html.Replace('src="analytics.js"', ('src="' + $prefix + 'analytics.js"'))
+  $privacyLabels = @{ru='Конфиденциальность'; el='Απόρρητο'; uk='Конфіденційність'; en='Privacy'}
+  $privacyLink = '<a href="' + $prefix + 'privacy.html#' + $lang + '">' + (Escape $privacyLabels[$lang]) + '</a>'
+  $html = $html.Replace('<div class="footer-links">', ('<div class="footer-links">' + $privacyLink))
   $html = $html.Replace('</head>', (($metadata -join "`n  ") + "`n</head>"))
   $folder = if ($lang -eq 'ru') { $dist } else { Join-Path $dist $lang }
   [IO.Directory]::CreateDirectory($folder) | Out-Null
