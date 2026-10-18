@@ -48,10 +48,10 @@ canonical, взаимные hreflang, метаданные Open Graph и JSON-LD
 powershell -NoProfile -ExecutionPolicy Bypass -File scripts/build-seo.ps1
 ```
 
-По умолчанию используется URL `https://yurchikace.github.io/rodiart/`, выведенный из Git remote.
+По умолчанию используется постоянный URL `https://rodiart.gr/`.
 Для другого адреса передайте `-SiteUrl https://example.com/`.
-GitHub Actions автоматически подставляет URL из Configure Pages при публикации,
-включая настроенный пользовательский домен. Генерируемые HTML в `dist` не редактируйте вручную.
+GitHub Actions использует `SITE_URL: https://rodiart.gr/` в `.github/workflows/pages.yml`.
+При смене домена обновите также это значение. Генерируемые HTML в `dist` не редактируйте вручную.
 Локальная генерация не требует Node.js или установки зависимостей. Индексация и позиции
 зависят от поисковых систем; наличие разметки само по себе их не гарантирует.
 

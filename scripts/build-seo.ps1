@@ -1,4 +1,4 @@
-param([string]$SiteUrl = 'https://yurchikace.github.io/rodiart/')
+param([string]$SiteUrl = 'https://rodiart.gr/')
 $ErrorActionPreference = 'Stop'
 $root = Split-Path $PSScriptRoot -Parent
 $dist = Join-Path $root 'dist'

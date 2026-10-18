@@ -29,7 +29,7 @@ jobs:
       - name: Generate searchable language pages
         shell: pwsh
         env:
-          SITE_URL: ${{ steps.pages.outputs.base_url }}
+          SITE_URL: https://rodiart.gr/
         run: ./scripts/build-seo.ps1 -SiteUrl $env:SITE_URL
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
