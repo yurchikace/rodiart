@@ -55,6 +55,7 @@ foreach ($lang in $languages) {
     '<a data-lang="' + $target + '" href="' + $href + '" hreflang="' + $target + '"' + $attrs + '</a>'
   })
   $html = $html.Replace('href="styles.css"', ('href="' + $prefix + 'styles.css"')).Replace('src="script.js"', ('src="' + $prefix + 'script.js"')).Replace('src="assets/', ('src="' + $prefix + 'assets/')).Replace('href="assets/', ('href="' + $prefix + 'assets/')).Replace('poster="assets/', ('poster="' + $prefix + 'assets/'))
+  $html = $html.Replace('src="language.js"', ('src="' + $prefix + 'language.js"'))
   $metadata = @('<link rel="canonical" href="' + $urls[$lang] + '">')
   foreach ($other in $languages) { $metadata += '<link rel="alternate" hreflang="' + $other + '" href="' + $urls[$other] + '">' }
   $metadata += '<link rel="alternate" hreflang="x-default" href="' + $SiteUrl + '">'

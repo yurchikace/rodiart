@@ -164,15 +164,7 @@ Object.assign(translations.en, {
   about2: 'Each look is designed for the individual dancer, taking their personality, figure and movement into account. Together, we discuss the idea, develop a sketch and choose fabrics and embellishments, so the dress expresses individuality and allows freedom of movement. We can discuss your ideas and order details in Russian, Ukrainian, English and Greek.'
 });
 
-// Keep old ?lang= links working; each language has a stable, rendered URL.
-const requestedLanguage = new URLSearchParams(location.search).get('lang');
-if (Object.prototype.hasOwnProperty.call(translations, requestedLanguage) && requestedLanguage !== document.documentElement.lang) {
-  const currentScript = document.querySelector('script[src$="script.js"]');
-  const siteRoot = new URL('.', currentScript.src);
-  const target = new URL(requestedLanguage === 'ru' ? 'index.html' : requestedLanguage + '/index.html', siteRoot);
-  target.hash = location.hash;
-  location.replace(target.href);
-}
+// Language routing runs in language.js before the page is rendered.
 document.getElementById('year').textContent = new Date().getFullYear();
 
 const addressElement = document.getElementById('atelier-address');
