@@ -48,7 +48,7 @@ Object.assign(translations.ru, {
   step1Title: 'Слушаем и вдохновляемся', step1Text: 'Обсуждаем ваши пожелания, характер танца и настроение будущего образа.',
   step2Title: 'Продумываем каждую линию', step2Text: 'Вместе с дизайнером прорабатываем форму, выбираем ткани, оттенки и декор.',
   step3Title: 'Визуализируем мечту', step3Text: 'Собираем идеи в эскиз, обсуждаем детали и вместе представляем платье в движении.',
-  step4Title: 'Начинается волшебство', step4Text: 'Ателье воплощает согласованный образ: от первых стежков до последних деталей — чтобы ваша идея стала вашим платьем.'
+  step4Title: 'От первого стежка до последнего страза.', step4Text: 'Перья, бахрома, сияние декора — каждая деталь становится частью вашего движения. Мы создаём авторское платье специально для вас, чтобы ваш образ был выразительным и цельным на паркете.'
 });
 Object.assign(translations.el, {
   makingEyebrow: 'ΑΠΟ ΤΟ ΣΚΙΤΣΟ ΣΤΟ ΑΤΕΛΙΕ', makingTitle: 'Από το σχέδιο στο φόρεμα.', makingText: 'Η ίδια ιδέα παίρνει μορφή: δουλειά στο χέρι, λαμπερές λεπτομέρειες και κάθε στοιχείο του νέου φορέματος.', makingCaption: 'Χειροποίητη δημιουργία · Λεπτομέρειες του φορέματος', makingVideoLabel: 'Δημιουργία φορέματος στο ατελιέ RodiArt', sketchVideoLabel: 'Η διαδικασία σχεδίασης', videoFallback: 'Το πρόγραμμα περιήγησής σας δεν υποστηρίζει βίντεο.', copyAddress: 'Αντιγραφή διεύθυνσης', addressCopied: 'Η διεύθυνση αντιγράφηκε', copyFailed: 'Επιλέξτε τη διεύθυνση και αντιγράψτε την χειροκίνητα.', addressLabel: 'Διεύθυνση του ατελιέ', mapsLink: 'Άνοιγμα στο Google Maps',
@@ -61,7 +61,7 @@ Object.assign(translations.el, {
   step1Title: 'Ακούμε και εμπνεόμαστε', step1Text: 'Συζητάμε τις επιθυμίες σας, τον χαρακτήρα του χορού και την αίσθηση της νέας σας εμφάνισης.',
   step2Title: 'Σχεδιάζουμε κάθε γραμμή', step2Text: 'Μαζί με τον σχεδιαστή διαμορφώνουμε τη σιλουέτα και επιλέγουμε υφάσματα, αποχρώσεις και διακοσμητικά στοιχεία.',
   step3Title: 'Δίνουμε εικόνα στο όνειρο', step3Text: 'Αποτυπώνουμε τις ιδέες σε ένα σκίτσο, συζητάμε τις λεπτομέρειες και φανταζόμαστε μαζί το φόρεμα σε κίνηση.',
-  step4Title: 'Η μαγεία ξεκινά', step4Text: 'Το ατελιέ ζωντανεύει το σχέδιο που επιλέξαμε μαζί: από τις πρώτες βελονιές μέχρι τις τελευταίες λεπτομέρειες, η ιδέα σας γίνεται το δικό σας φόρεμα.'
+  step4Title: 'Από την πρώτη βελονιά μέχρι το τελευταίο στρας.', step4Text: 'Φτερά, κρόσσια και λαμπερές λεπτομέρειες — κάθε στοιχείο γίνεται μέρος της κίνησής σας. Δημιουργούμε ένα πρωτότυπο φόρεμα αποκλειστικά για εσάς, ώστε η εμφάνισή σας στην πίστα να έχει έκφραση και συνοχή.'
 });
 Object.assign(translations.en, {
   makingEyebrow: 'FROM SKETCH TO ATELIER', makingTitle: 'From drawing to dress.', makingText: 'The same design takes shape through handwork, shimmering embellishments and every detail of the dress to come.', makingCaption: 'Made by hand · Details of the real dress', makingVideoLabel: 'Making the dress at the RodiArt atelier', sketchVideoLabel: 'Sketch drawing process', videoFallback: 'Your browser does not support video.', copyAddress: 'Copy address', addressCopied: 'Address copied', copyFailed: 'Select the address and copy it manually.', addressLabel: 'Atelier address', mapsLink: 'Open in Google Maps',
@@ -74,7 +74,7 @@ Object.assign(translations.en, {
   step1Title: 'We listen and find inspiration', step1Text: 'We discuss your wishes, the character of your dance and the mood of your future look.',
   step2Title: 'We consider every line', step2Text: 'Together with the designer, we develop the silhouette and choose fabrics, colours and embellishments.',
   step3Title: 'We visualise your dream', step3Text: 'We bring the ideas together in a sketch, discuss the details and imagine the dress in motion with you.',
-  step4Title: 'The magic begins', step4Text: 'The atelier brings our agreed design to life: from the first stitches to the final details, your idea becomes your dress.'
+  step4Title: 'From the first stitch to the final rhinestone.', step4Text: 'Feathers, fringe and shimmering embellishments — every detail becomes part of your movement. We create an original dress just for you, bringing every element of your look together for an expressive presence on the dance floor.'
 });
 
 translations.uk = {
@@ -108,7 +108,7 @@ translations.uk = {
   step1Title: 'Слухаємо та надихаємося', step1Text: 'Обговорюємо ваші побажання, характер танцю та настрій майбутнього образу.',
   step2Title: 'Продумуємо кожну лінію', step2Text: 'Разом із дизайнером опрацьовуємо форму, обираємо тканини, відтінки та декор.',
   step3Title: 'Візуалізуємо мрію', step3Text: 'Поєднуємо ідеї в ескізі, обговорюємо деталі й разом уявляємо сукню в русі.',
-  step4Title: 'Починається магія', step4Text: 'Ательє втілює узгоджений образ: від перших стібків до останніх деталей — щоб ваша ідея стала вашою сукнею.',
+  step4Title: 'Від першого стібка до останнього страза.', step4Text: 'Пір’я, бахрома, сяйво декору — кожна деталь стає частиною вашого руху. Ми створюємо авторську сукню спеціально для вас, щоб ваш образ був виразним і цілісним на паркеті.',
   makingCaption: 'Ручна робота · Деталі справжньої сукні', makingVideoLabel: 'Робота над сукнею в ательє RodiArt',
   videoFallback: 'Ваш браузер не підтримує відео.',
   contactEyebrow: 'ВАШ НАСТУПНИЙ ВИХІД НА ПАРКЕТ', contactTitle: 'Почнімо з вашої ідеї.',
@@ -165,6 +165,16 @@ Object.assign(translations.en, {
 });
 
 // Language routing runs in language.js before the page is rendered.
+Object.assign(translations.el, {
+  pageTitle: 'Φορέματα Latin & Στολές Λάτιν στην Αθήνα | RodiArt',
+  description: 'Γυναικεία και παιδικά φορέματα λάτιν, επαγγελματικές στολές Latin και ρούχα χορού στα μέτρα σας. Ατελιέ RodiArt στην Αργυρούπολη, Αθήνα.',
+  title1: 'Φορέματα Latin', title2: 'στα μέτρα σας.',
+  intro: 'Δημιουργούμε φορέματα και στολές για αγωνιστικό λάτιν χορό, για παιδιά και ενήλικες. Από την ιδέα και το σκίτσο μέχρι τη ραφή στα μέτρα σας, στο ατελιέ RodiArt στην Αργυρούπολη, Αθήνα.',
+  workTitle: 'Φορέματα λάτιν.\nΜοναδικές δημιουργίες.',
+  dress1Alt: 'Μαύρο φόρεμα λάτιν RodiArt με φούξια φτερά και λαμπερές λεπτομέρειες σε χορεύτρια',
+  dress2Alt: 'Ασπρόμαυρο φόρεμα λάτιν RodiArt με βολάν σε χορεύτρια'
+});
+
 document.getElementById('year').textContent = new Date().getFullYear();
 
 const addressElement = document.getElementById('atelier-address');

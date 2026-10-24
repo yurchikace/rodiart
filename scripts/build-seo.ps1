@@ -30,6 +30,8 @@ foreach ($lang in $languages) {
   $text = $texts[$lang]
   $prefix = if ($lang -eq 'ru') { '' } else { '../' }
   $html = $template.Replace('<html lang="ru">', ('<html lang="' + $lang + '">'))
+  $serviceContent = [IO.File]::ReadAllText((Join-Path $root ('site/latin-' + $lang + '.html')))
+  $html = $html.Replace('    <!-- localized-service-content -->', $serviceContent)
   $html = [regex]::Replace($html, '(?s)(<([a-z0-9]+)\b[^>]*\bdata-i18n="([^"]+)"[^>]*>).*?(</\2>)', {
     param($m)
     $key = $m.Groups[3].Value
